@@ -1,0 +1,83 @@
+
+.btn {
+    border-bottom: 1px solid hsla(73, 92%, 49%, 0.2);
+    text-shadow: 0 1px 0 hsla(170, 94%, 21%, 0.2);
+    text-decoration: none !important;
+    text-transform: uppercase;
+    color: aliceblue !important;
+    font-weight: bold;
+    border-radius: 5px;
+    padding: 10px 20px;
+    margin: 0 3px;
+    position: relative;
+    display: inline-block;
+    -o-transition: all 0.1s;
+    transition: all 0.1s;
+}
+.btn:active {
+    -o-transform: translateY(7px);
+    transform: translateY(7px);
+    box-shadow: 0 3px 0 #047c8b,
+                0 4px 6px hsla(198, 87%, 6%, 0.7);
+}
+
+.btn {
+    background: c;
+    box-shadow: 0 10px 0 #047c8b,
+                0 11px 5px hsla(184, 96%, 9%, 0.5);
+}
+
+
+.jumbotron{
+     background-color:rgba(206, 221, 220, 0.795);
+}
+
+
+.image-container {
+    display: flex;
+    justify-content: center;
+    background-position: center;
+    object-fit: cover;
+    position: relative;
+    width: 420px;
+    height: 325px;
+    perspective: 1000px; /* Añade perspectiva para el efecto 3D */
+  }
+
+  .image-container img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: opacity 0.3s ease-in-out, transform 0.6s ease-in-out;
+    backface-visibility: hidden; /* Oculta la cara trasera durante la rotación */
+  }
+
+  .image-container .Backimg {
+    opacity: 0;
+    transform: rotateX(180deg); /* Rotación inicial de la imagen trasera en el eje Y */
+  }
+
+  .image-container:hover .Backimg {
+    opacity: 1;
+    transform: rotateX(0deg); /* Rotación hacia 0 grados para mostrar la imagen */
+  }
+
+  .image-container:hover .Frontimg {
+    opacity: 0;
+    transform: rotateX(-180deg); /* Rotación a -180 grados para ocultar la imagen frontal */
+  }
+
+  .Frontimg {
+    width: 20rem ;
+    object-fit: cover;
+    image-rendering: auto;
+    filter: brightness(100%) contrast(120%) saturate(100%) opacity(200%);
+  }
+  .Backimg{
+    width: 20rem;
+    object-fit: cover;
+    image-rendering: auto;
+    filter: brightness(100%) contrast(120%) saturate(100%) opacity(200%);
+  }
